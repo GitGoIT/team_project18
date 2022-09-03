@@ -1,0 +1,51 @@
+<header class="header">
+<div class="container header__container">
+
+    <div class="header__mainflex">
+
+    <!-- nav -->
+    <nav class="header__nav">
+        <a class="header__logo"><img src="./images/header/site-logo.svg" class="header__logo-image"/></a>
+        <!-- <ul class="">
+            <li class=""><a href="#" class=""></a></li>
+            <li class=""><a href="#" class=""></a></li>
+            <li class=""><a href="#" class=""></a></li>
+        </ul> -->
+        <button type="button" class="header__button">
+            <!-- <img src="./images/header/burger.svg" class="header__button-svg"/> -->
+            <svg class="header__button-svg" aria-label="переключатель мобильного меню">
+                <use href="./images/sprite.svg#icon-Burger"></use>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- sidebar -->
+
+    <div class="sidebar">  
+        <button type="button" class="sidebar__buy-button">Buy now ></button>
+        <ul class="sidebar__items">
+            <li class="sidebar__item"><p class="sidebar__number">16</p></li>
+            <li class="sidebar__item"><p class="sidebar__text">cafes</p></li>
+            <li class="sidebar__item"><p class="sidebar__number">23</p></li>
+            <li class="sidebar__item"><p class="sidebar__text">food trucks</p></li>
+        </ul>
+    </div>
+
+    </div> 
+
+    <!-- title -->
+    <div class="title-container"> 
+    <h1 class="header__title">ice cream made with <span class="header__title-span">passion</span></h1>
+    </div>
+    <ul class="heder-links">
+        <li class="heder-links__item"><button>Products</button></li>
+        <li class="heder-links__item"><a class="heder-links__link">How it’s made?</a></li>
+    </ul>
+        <picture  class="header__ice-img">
+            <source srcset="./images/header/ice.png" media="(max-width: 768px)" />
+            <source srcset="./images/header/ice_tablet.png" media="(max-width: 1199px)" />
+            <source srcset="./images/header/ice_desktop.png" media="(min-width: 1200px)" />
+            <img src="./images/header/ice.png" alt="Мороженко" />
+        </picture> 
+</div>
+</header>
