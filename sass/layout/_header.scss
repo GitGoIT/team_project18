@@ -1,0 +1,189 @@
+.header-section {
+    background: #FFFFFF;
+    border: 1px solid #ECECEC;}
+
+//--320
+
+@media screen and (max-width: 767px) {
+    .header-menu .header-menu__item {
+        display: none;}
+
+    .header-contact {
+        display: none;}
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;}
+
+    .mobile-menu__open-btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        line-height: 0;}
+        /*--прибираємо 3px знизу під svg, які резервує браузер--*/     
+}
+
+//--768
+
+@media screen and (min-width: 768px) {
+    .mobile-menu__open-btn {
+        display: none;}
+
+    .header-container {
+        display: flex;
+        align-items: center;}
+
+    .header-nav {
+        display: flex;
+        align-items: center;}
+
+    .header-logo {
+        padding-top: 26px;
+        padding-bottom: 26px;}
+
+    .header-menu {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        margin-left: 87px;}
+
+    .header-menu__item:not(:last-child) {
+        margin-right: 50px;}
+
+    .header-menu__link {
+        position: relative;
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: var(--primery-text-colour);
+        /*--Додаємо плавність переходу--*/
+        transition: var(--transition-dur-and-func);
+    
+        /*--Додаємо ефект наведення--*/
+        &:hover,
+        &:focus {
+            color: var(--accent-color);}
+        }
+
+        /*--Додаємо підкреслювання на nav--*/
+    .current {
+        color: var(--accent-color);
+        
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            border-radius: 2px;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            transition: background-color var(--transition-dur-and-func);
+            bottom: -33px;}
+        
+        .header-menu__link &:hover:after {
+            background-color: var(--accent-color);}
+    }
+
+    .header-contact {
+        align-items: center;
+        margin-left: auto;
+        padding-top: 21px;
+        padding-bottom: 21px;}
+
+    .header-contact__link-mail {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        margin-bottom: 10px;
+        color: var(--secondary-text-colour);
+        transition: color var(--transition-dur-and-func);
+
+     /*--Додаємо ефект наведення--*/
+     &:hover,
+     &:focus {
+         color: var(--accent-color);}
+    }
+
+    .header-contact__icon-mail {
+        margin-right: 8px;
+        fill: var(--secondary-text-colour);
+        transition: fill var(--transition-dur-and-func);
+    
+        .header-contact__link-mail:hover &,
+        .header-contact__link-mail:focus & {
+            fill: var(--accent-color);}
+    }
+
+    .header-contact__link-phone {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: var(--secondary-text-colour);
+        transition: color var(--transition-dur-and-func);
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color)}
+    }
+
+    .header-contact__icon-phone {
+        margin-right: 8px;
+        fill: var(--secondary-text-colour);
+        transition: fill var(--transition-dur-and-func);
+    
+        .header-contact__link-phone:hover &,
+        .header-contact__link-phone:focus & {
+            fill: var(--accent-color);}
+    }       
+}
+
+//--1200
+
+@media screen and (min-width: 1200px) {
+    
+    .header-logo {
+        padding-top: 24px;
+        padding-bottom: 25px;}
+
+    .header-menu {
+        margin-left: 92px;}
+
+    .header-contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        padding-top: 32px;
+        padding-bottom: 32px;}
+
+    .header-contact__link-mail {
+        font-size: 14px;
+        line-height: 1.14;
+        margin-right: 30px;
+        margin-bottom: 0;}
+    
+    .header-contact__icon-mail {
+        margin-right: 10px;}
+    
+    .header-contact__link-phone {
+        font-size: 14px;
+        line-height: 1.14;}
+    
+    .header-contact__icon-phone {
+        margin-right: 10px;}
+
+}

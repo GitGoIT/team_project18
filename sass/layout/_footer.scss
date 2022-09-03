@@ -1,0 +1,199 @@
+.footer-section {
+    background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;}
+
+
+.contacts-container {
+    min-width: max-content;
+    text-align: center;}
+
+.footer-logo {
+    color: #FFFFFF;}
+
+.contacts {
+    margin-top: 20px;}
+
+.contacts__item {
+    margin-bottom: 8px;}
+
+.contacts__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);}
+
+.contacts__link_address {
+    color: #FFFFFF;}
+
+.social-container {
+    width: 206px;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;}
+
+.social-container-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;}
+
+.social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+            background-color: var(--accent-color);}
+}
+
+.social__icon {
+    fill: #FFFFFF;}
+
+/*======= FOOTER FORM=======*/
+
+.sbscr-form-container {
+    text-align: center;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.sbscr-form-container-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+
+
+.sbscr-form__field {
+    width: 100%;
+}
+
+.sbscr-form__input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-left: 16px;
+    background-color: #2F303A;
+    transition: border-color var(--transition-dur-and-func);
+
+    &:focus {
+             outline: none;
+             border-color: var(--accent-color);}
+    
+    &::placeholder {
+             font-size: 16px;
+             line-height: 1.25;
+             letter-spacing: 0.03em;
+             color: rgba(255, 255, 255, 0.6);}
+}
+
+.sbscr-form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px 28px 10px 28px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    border: var(--accent-color);
+    border-radius: 4px;
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus {
+            background-color: #188CE8;}
+}
+
+.sbscr-form__icon {
+    margin-left: 10px;}
+
+
+//--768
+
+@media screen and (min-width: 768px) {
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;}
+
+        .sbscr-form__input {
+            width: 450px;}
+
+        .social-container {
+            margin-top: 5px;
+            margin-left: 165px;}
+        
+        .contacts-container {
+            margin-left: 76px;}
+}
+
+
+//--1200
+
+@media screen and (min-width: 1200px) {
+        .footer-container {
+            display: flex;}
+
+        .sbscr-form {
+            display: flex;}
+
+        .contacts-container {    
+            text-align: left;
+            margin-left: 0;}
+
+        .social-container {
+            text-align: left;
+            margin-top: 12px;
+            margin-left: 70px;}
+
+        .sbscr-form-container {
+            text-align: left;
+            margin-left: 93px;
+            margin-top: 12px;}
+
+        .sbscr-form__input {
+            width: 358px;}
+
+        .sbscr-form__button {
+            margin-left: 12px;
+            margin-top: 0;}
+
+        .contacts__item {
+            margin-bottom: 9px;}
+
+}

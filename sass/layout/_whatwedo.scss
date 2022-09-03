@@ -1,0 +1,38 @@
+.whatwedo {
+    padding-top: 0;}
+
+.whatwedo__list {
+    display: flex;
+    gap: 30px;}
+
+.whatwedo__item {
+    display: flex;
+    flex-basis: calc(100% - 60px/3)}
+
+.whatwedo__item-overlay {
+    position: relative;
+}
+
+.whatwedo__title-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(47, 48, 58, 0.8);
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+//--480, 768
+
+@media screen and (max-width: 1199px) {
+    .whatwedo {
+            display: none;}
+}
