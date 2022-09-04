@@ -1286,6 +1286,10 @@ body {
     margin-left: 14px;
   }
 }
+.customer {
+  height: 300px;
+}
+
 /*-----COMMON------*/
 /*--Скидаємо дефолтні зовнішні відступи браузеру--*/
 h1,
@@ -1340,9 +1344,9 @@ body {
 }
 
 .locations-button {
-  padding-top: 12px;
+  padding-top: 14px;
   padding-right: 34px;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
   padding-left: 34px;
   font-family: "Montserrat";
   font-style: normal;
@@ -1353,7 +1357,7 @@ body {
   align-items: center;
   text-align: center;
   color: #131313;
-  border: 2px solid #F8D24E;
+  border: #F8D24E;
   border-radius: 10px;
   background-color: #F8D24E;
   display: block;
@@ -1461,7 +1465,6 @@ body {
 }
 
 .contacts__block-container {
-  max-width: 368px;
   height: content;
   background: #FFFFFF;
   padding: 40px;
@@ -1470,45 +1473,46 @@ body {
 }
 
 .contacts__block-list {
-  /*position: absolute;
-  z-index: 100;*/
-  transform: translate(0, -95px);
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transform: translate(0, -345px);
 }
 
 .contacts__block-item {
   display: flex;
+  max-width: 280px;
 }
 
 .contacts__block-title-cafe {
-  width: 73px;
-  height: 28px;
+  width: 80px;
+  height: 16px;
   background-color: #F8D24E;
-  border-radius: 6px;
+  border-radius: 4px;
   text-align: center;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.86;
+  font-size: 12px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #131313;
+  color: #FCFCFC;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .contacts__block-title-truck {
-  width: 138px;
-  height: 28px;
+  width: 130px;
+  height: 16px;
   background-color: #F8D24E;
-  border-radius: 6px;
+  border-radius: 4px;
   text-align: center;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.86;
+  font-size: 12px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #131313;
+  color: #FCFCFC;
   text-transform: uppercase;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .contacts__list-address {
@@ -1534,15 +1538,15 @@ body {
   max-width: 288px;
   height: 0px;
   border: 1px solid #E1E1E1;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .contacts__text {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.04em;
   color: #131313;
@@ -1562,20 +1566,96 @@ body {
 
 .contacts__list-button {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-top: -30px;
-  padding-bottom: 120px;
+  margin-top: -310px;
+  padding-bottom: 39px;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts__block-list {
+    transform: translate(0, -300px);
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .contacts__list-button {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: -235px;
+    padding-bottom: 40px;
+  }
+  .contacts__block-item {
+    max-width: calc((100% - 32px) / 3);
+  }
+  .contacts__block-container {
+    padding-top: 40px;
+    padding-left: 24px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+  }
+  .contacts__text {
+    font-size: 14px;
+  }
+  .contacts__item-time {
+    margin-bottom: 12px;
+  }
+  .contacts__list::after {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .contacts__block-title-cafe {
+    width: 73px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: #131313;
+    margin-bottom: 32px;
+  }
+  .contacts__block-title-truck {
+    width: 138px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: #131313;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__block-list {
+    transform: translate(0, -100px);
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+  .contacts__list-button {
+    margin-top: -35px;
+    padding-bottom: 120px;
+  }
+  .contacts__block-item {
+    max-width: calc((100% - 64px) / 3);
+  }
+  .contacts__block-container {
+    padding: 40px;
+  }
+  .contacts__text {
+    font-size: 16px;
+  }
+}
 /*-----FOOTER------*/
 .footer__text-small {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 1.23;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #FCFCFC;
@@ -1586,7 +1666,7 @@ body {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 58px;
+  font-size: 34px;
   line-height: 1.22;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1595,7 +1675,7 @@ body {
 
 .footer__list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 54px;
 }
 
@@ -1603,14 +1683,14 @@ body {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 1.86;
+  font-size: 14px;
+  line-height: 1.52;
   letter-spacing: 0.02em;
   color: #7A7A7A;
   text-align: center;
-  padding-top: 12px;
-  padding-bottom: 11px;
-  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 62px;
+  max-width: 100%;
   border-top: 1px solid #E1E1E1;
 }
 
@@ -1619,8 +1699,8 @@ body {
   align-items: center;
   justify-content: right;
   gap: 30px;
-  margin-top: 12px;
-  margin-bottom: 40px;
+  margin-top: 42px;
+  margin-bottom: 38px;
 }
 
 .footer__link-social {
@@ -1645,11 +1725,16 @@ body {
   fill: #FCFCFC;
 }
 
+.footer__block-tel {
+  display: flex;
+  justify-content: right;
+}
+
 .footer__link-tel {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #FFFFFF;
@@ -1659,9 +1744,76 @@ body {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #131313;
-  cursor: default;
+  cursor: text;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__text-small {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 9px;
+    max-width: 352px;
+  }
+  .footer__text-big {
+    font-size: 48px;
+    max-width: 340px;
+  }
+  .footer__link-tel {
+    font-size: 14px;
+  }
+  .footer__link-tel-span {
+    font-size: 14px;
+  }
+  .footer__list-social {
+    margin-top: 68px;
+    margin-bottom: 32px;
+  }
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+  .footer__link-tel {
+    font-size: 16px;
+  }
+  .footer__link-tel-span {
+    font-size: 16px;
+  }
+  .footer__text-copywrite {
+    font-size: 12px;
+    line-height: 1.86;
+    max-width: 100%;
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__text-small {
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 14px;
+    max-width: 600px;
+  }
+  .footer__text-big {
+    font-size: 58px;
+    max-width: 600px;
+  }
+  .footer__link-tel {
+    font-size: 16px;
+  }
+  .footer__link-tel-span {
+    font-size: 16px;
+  }
+  .footer__list-social {
+    margin-top: 12px;
+    margin-bottom: 40px;
+  }
+  .footer__list {
+    margin-bottom: 54px;
+  }
 }/*# sourceMappingURL=main.css.map */
