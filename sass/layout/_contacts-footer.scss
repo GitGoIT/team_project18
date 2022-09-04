@@ -387,6 +387,7 @@ body {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #FCFCFC;
+    max-width: 250px;
     margin-bottom: 14px;}
 
 
@@ -398,7 +399,8 @@ body {
     line-height: 1.22;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FCFCFC;}
+    color: #FCFCFC;
+    max-width: 250px;}
 
 .footer__list {
     display: flex;
