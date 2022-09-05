@@ -1363,14 +1363,13 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transition: background-color, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color, border-color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .locations-button:hover {
   background-color: #0A8817;
   border-color: #0A8817;
 }
 .locations-button:focus {
-  background-color: #0A8817;
   color: #FCFCFC;
 }
 
@@ -1394,7 +1393,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color, color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .franchise-button:hover {
   border-color: #0A8817;
@@ -1405,6 +1404,7 @@ body {
 
 .button-icon {
   margin-left: 6px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .locations-button:focus .button-icon, .franchise-button:focus .button-icon {
   fill: #FCFCFC;
@@ -1422,49 +1422,23 @@ body {
   clip: rect(0 0 0 0);
 }
 
-/*--Задаємо ширину контенту--*/
-.ice-container {
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-}
-
-@media screen and (min-width: 480px) {
-  .ice-container {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media screen and (min-width: 768px) {
-  .ice-container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ice-container {
-    width: 1200px;
-  }
-}
-/*--Задаємо падінги для всіх секцій--*/
-.ice-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
 /*-----CONTACTS------*/
 .contacts {
   position: relative;
   margin-top: 0;
+  z-index: 1;
+}
+
+.contacts__container {
+  border: 1px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contacts__block-container {
+  width: 440px;
   height: content;
   background: #FFFFFF;
   padding: 40px;
@@ -1482,7 +1456,7 @@ body {
 
 .contacts__block-item {
   display: flex;
-  max-width: 280px;
+  max-width: 100%;
 }
 
 .contacts__block-title-cafe {
@@ -1535,7 +1509,7 @@ body {
 
 .contacts__list::after {
   content: "";
-  max-width: 288px;
+  max-width: 100%;
   height: 0px;
   border: 1px solid #E1E1E1;
   margin-top: 24px;
@@ -1543,6 +1517,7 @@ body {
 }
 
 .contacts__text {
+  display: block;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -1570,11 +1545,21 @@ body {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-top: -310px;
-  padding-bottom: 39px;
+  margin-top: -313px;
+  padding-bottom: 40px;
 }
 
+@media screen and (min-width: 480px) {
+  .contacts__container {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
+  .contacts__container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   .contacts__block-list {
     transform: translate(0, -300px);
     display: flex;
@@ -1585,7 +1570,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    margin-top: -235px;
+    margin-top: -240px;
     padding-bottom: 40px;
   }
   .contacts__block-item {
@@ -1629,14 +1614,19 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
+  .contacts__container {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .contacts__block-list {
     transform: translate(0, -100px);
     display: flex;
     flex-direction: row;
     gap: 32px;
+    margin-bottom: 204px;
   }
   .contacts__list-button {
-    margin-top: -35px;
     padding-bottom: 120px;
   }
   .contacts__block-item {
@@ -1650,6 +1640,19 @@ body {
   }
 }
 /*-----FOOTER------*/
+.footer {
+  position: relative;
+  z-index: 2;
+}
+
+.footer__container {
+  border: 1px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer__text-small {
   font-family: "Montserrat";
   font-style: normal;
@@ -1681,6 +1684,11 @@ body {
   margin-bottom: 54px;
 }
 
+.footer__block-copywrite {
+  max-width: 100%;
+  border-top: 1px solid #E1E1E1;
+}
+
 .footer__text-copywrite {
   font-family: "Montserrat";
   font-style: normal;
@@ -1692,8 +1700,9 @@ body {
   text-align: center;
   padding-top: 16px;
   padding-bottom: 62px;
-  max-width: 100%;
-  border-top: 1px solid #E1E1E1;
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer__list-social {
@@ -1753,7 +1762,17 @@ body {
   cursor: text;
 }
 
+@media screen and (min-width: 480px) {
+  .footer__container {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) {
+  .footer__container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   .footer__text-small {
     font-weight: 700;
     font-size: 26px;
@@ -1789,12 +1808,17 @@ body {
   .footer__text-copywrite {
     font-size: 12px;
     line-height: 1.86;
-    max-width: 100%;
+    width: 100%;
     padding-top: 12px;
     padding-bottom: 11px;
   }
 }
 @media screen and (min-width: 1200px) {
+  .footer__container {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .footer__text-small {
     font-weight: 400;
     font-size: 30px;
